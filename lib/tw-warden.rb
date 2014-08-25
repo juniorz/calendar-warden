@@ -12,7 +12,7 @@ module ThoughtWorks
 
   OAUTH_AUTHORIZE = '/oauth2/authorize'
   OAUTH_CALLBACK = '/oauth2/authorized'
-  OAUTH_SUCCESS = '/oauth/success/'
+  OAUTH_SUCCESS = '/oauth-success/'
 
   class Warden < Sinatra::Base
     configure :production, :development do
