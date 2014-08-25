@@ -19,8 +19,11 @@ module ThoughtWorks
       enable :logging
     end
 
-    configure do
+    configure :development, :test do
       enable :sessions
+    end
+
+    configure do
       set :session_secret, ENV['SESSION_SECRET'] ||= 'super secret'
 
       client = Google::APIClient.new(
